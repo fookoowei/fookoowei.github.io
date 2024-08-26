@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" contents="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Portfolio</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <img src="images/logo.png" class ="logo">
+                    <ul>
+                        <li><a href="#header">Home</a></li>
+                        <li><a href="#about">About Me</a></li>
+                        <li><a href="#services">Past Projects</a></li>
+                    </ul>
+                </nav>
+                <div class="header-text">
+                    <p>Software Engineer</p>
+                    <h1>Hi, My name is <span>Foo Koo Wei</span></h1>
+                </div>
+            </div>
+        </div>
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="images/me.png">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p><br>I am Foo Koo Wei, a recent Software Engineering graduate from Universiti Tunku Abdul Rahman (UTAR) with a passion for technology and problem-solving. My academic journey has equipped me with a strong foundation in Object-Oriented Programming, mobile app development, and web development. My most proficient language is Java, but I am also skilled in HTML, CSS, JavaScript, PHP, Node.js, React Native, Laravel, and MySQL and so on listed in the resume too.
+                            One of my greatest strengths is my ability to adapt quickly to new environments and technologies. I am constantly seeking to expand my knowledge and am eager to learn new programming languages and frameworks to tackle challenging projects. Although I am a fresh graduate, I am driven to grow as a software engineer and am excited to contribute to innovative and dynamic teams.
+                            I am looking for opportunities where I can apply my skills as a software engineer, continue learning, and make meaningful contributions to the team and projects I am involved in.</p>
+                        <br>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Software Development</span><br>Java<br>C++<br>Python<br></li>
+                                <li><span>Web Development</span><br>HTML<br>CSS<br>Javascript<br>PHP<br></li>
+                                <li><span>Mobile App Development</span><br>React Native<br>Node.js<br>Java (Android Studio)</li>
+                                <li><span>Game Development</span><br>C#</li>
+                                <li><span>Framework</span><br>Laravel<br>Flask</li>
+                                <li><span>Database Management System</span><br>MySQL<br>SQLite</li>
+                                <li><span>Version Control System</span><br>Git</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>Internship at Unified Communications SDN BHD</span><br><br>Research about 5G Network Slicing on android<br>Develop an android app that act as an administrator<br>Implement 5G network slicing feature to the app<br>Review and implement minor configurations to Token Manager OAuth 2.0</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>Graduation</span><br>Completed Bachelor of Science(HONOURS) Software Engineering with merit</li>
+                                <li><span>Dean's List</span><br>January 2021<br>June 2022</li>
+                                <li><span>MUET</span><br>Band 4</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="services">
+            <div class="container">
+                <h1 class="sub-title">Past Projects</h1>
+                <div class="services-list">
+                    <div>
+                        <h2>Hazelnut Chocolate Website</h2>
+                        <p>The hazelnut chocolate is a website that enables users to order chocolate from
+                            the company Choco Smith online. WampServer, a Windows web development
+                            environment that integrates the Apache web server, MySQL database, and PHP
+                            programming language, is used. It is basically functioning as a chocolate ordering system for the users.
+                            </p><br>
+                        <img src="images/website.png">
+                        <a href="https://github.com/Anpupupi/Hazelnut-Chocolate-Website">Learn More>></a>
+                    </div>
+                    <div>
+                        <h2>Coffee Ordering Application</h2>
+                        <p>The coffee ordering application is designed to provide users with a seamless and enjoyable coffee ordering experience. It involves using react native, node.js and sqlite to create the application. This applications allows user to perform functions such as add items to cart, view items, view past orders, add balance and many more.</p>
+                        <br>
+                        <img src="images/app.png">
+                    </div>
+                    <div>
+                        <h2>Eternal Nexus</h2>
+                        <p>Eternal Nexus is a sci-fi shooting game that is based on outer space. It is a first-person shooting game that allows the player to use different kinds of firearms and innate skills such as teleport, flying and dashing. This game is fully created with C# programming language.</p>
+                        <a href="https://github.com/Anpupupi/Ethernal-Nexus">Learn More>></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents")
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+        </script>
+    </body>
+</html>
